@@ -263,13 +263,13 @@ input {
 .banner-principal {
     width: 100%;
     overflow: hidden;
-    background: #fff;
 }
 
 .banner-imagem-fixa {
     display: block;
     width: 100%;
     height: auto;
+    object-fit: contain;
 }
 
 .banner-bolinhas {
@@ -1024,7 +1024,7 @@ input {
 .rodape-logo img {
     width: 165px;
     height: auto;
-    max-height: 75px;
+    max-height: 130px;
     object-fit: contain;
 }
 
@@ -1065,23 +1065,40 @@ input {
     background: #dceaff;
 }
 
-.voltar-topo {
-    position: absolute;
-    top: 80%;
-    right: 12px;
+
+.logo-benta {
+    width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
-    border: 4px solid #e9f2ff;
+    align-items: center;
+    margin-top: 100px;
+    padding-bottom: 25px;
+}
+
+.logo-benta img {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+}
+
+.voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+
+    width: 65px;
+    height: 65px;
+    border: none;
     border-radius: 50%;
-    background: #fff;
-    color: #16448e;
-    font-size: 30px;
+
+    background-color: white;
+    color: #0056a6;
+    font-size: 40px;
     font-weight: bold;
+
     cursor: pointer;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 900px) {
@@ -1400,6 +1417,102 @@ input {
 }
 
 
+/* Escondido no computador */
+.botao-menu-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .barra-topo {
+        position: relative;
+        min-height: 60px;
+    }
+
+    .botao-menu-mobile {
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 5%;
+        z-index: 10;
+
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        font-size: 32px;
+        cursor: pointer;
+    }
+}
+
+
+/* Segundo menu: escondido no computador */
+.menu-mobile-logo {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Organiza a logo e o botão */
+    .cabecalho-interno {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    /* Logo do SENAI */
+    .logo {
+        display: block;
+    }
+
+    /* Esconde as abas de cursos no celular */
+    .cabecalho-interno .menu {
+        display: none;
+    }
+
+    /* Mostra o botão abaixo da logo */
+    .menu-mobile-logo {
+        display: block;
+        width: 55px;
+        height: 55px;
+        background-color: #0056a6;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    /* Esconde a pesquisa no celular */
+    .pesquisa {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .barra-topo .container.links-topo {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+
+    .barra-topo .links-esquerda {
+        margin: 0;
+        padding: 0;
+        justify-content: flex-start;
+        gap: 0;
+    }
+
+    .barra-topo .links-esquerda a {
+        padding: 8px 6px;
+        white-space: nowrap;
+    }
+}
+
 /* ========================================
    AJUSTES PARA CELULARES ATE 600px
 ======================================== */
@@ -1441,3 +1554,73 @@ input {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* Notícias: deslizar para os lados somente no celular */
+@media screen and (max-width: 768px) {
+    #noticias .grade-noticias {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 10px 16px 20px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #noticias .noticia {
+        flex: 0 0 85%;
+        min-width: 0;
+        scroll-snap-align: start;
+    }
+
+    #noticias .grade-noticias::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    #noticias .grade-noticias::-webkit-scrollbar-thumb {
+        background: #075ba8;
+        border-radius: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .barra-topo {
+        height: 47px;
+        overflow: visible;
+    }
+
+    .barra-topo .container.links-topo {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 47px;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+    }
+
+    .barra-topo .links-esquerda {
+        display: flex;
+        width: 100%;
+        height: 47px;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: nowrap;
+        overflow: visible;
+    }
+
+    .barra-topo .links-direita {
+        display: none;
+    }
+
+    .barra-topo .links-esquerda a {
+        display: flex;
+        flex: 0 0 auto;
+        padding: 0 7px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+}
+
