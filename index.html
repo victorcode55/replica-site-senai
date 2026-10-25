@@ -1,3 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI | FIEMG</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
 <title>SENAI | FIEMG</title>
 
 
@@ -49,30 +63,20 @@
     </div>
 </header>
 
-<main>
-    <section class="banner container">
-        <div class="banner-texto">
-            <span class="subtitulo">SENAI • EDUCAÇÃO PROFISSIONAL</span>
 
-            <h1>
-                QUEM FAZ PARTE DO SISTEMA FIEMG TEM
-                A FACULDADE SENAI PARA IR AINDA MAIS LONGE.
-            </h1>
+<section class="banner-principal">
+    <img
+        src="imagens/Captura de tela 2026-10-24 235120.png"
+        alt="Banner principal da Faculdade SENAI"
+        class="banner-imagem-fixa"
+    >
 
-            <ul>
-                <li>Inovação tecnológica e protagonismo industrial</li>
-                <li>Formação profissional aplicada aos processos industriais</li>
-                <li>Especialização em gestão e engenharia</li>
-                <li>Design de moda digital e inteligência artificial</li>
-            </ul>
+    <div class="banner-bolinhas">
+        <span class="bolinha"></span>
+        <span class="bolinha ativa"></span>
+    </div>
+</section>
 
-            <a href="#cursos" class="botao branco">
-                CONHEÇA OS CURSOS
-            </a>
-        </div>
-
-        <div class="banner-imagem"></div>
-    </section>
 
     <section class="introducao container">
         <h2>Para cada desafio, uma oportunidade do SENAI.</h2>
@@ -88,7 +92,7 @@
 
             <div class="cards">
                 <article class="card">
-                    <div class="icone">▤</div>
+                    <img class="icone" src="imagens/icone 1.png" alt="Educação">
                     <h3>Educação</h3>
                     <p>
                         Somos referência em formação para quem quer começar,
@@ -98,7 +102,7 @@
                 </article>
 
                 <article class="card">
-                    <div class="icone">♧</div>
+                    <img class="icone" src="imagens/icone 2.png" alt="Desenvolvimento">
                     <h3>Desenvolvimento<br>Industrial</h3>
                     <p>
                         Promovemos o desenvolvimento sustentável e a
@@ -108,7 +112,7 @@
                 </article>
 
                 <article class="card">
-                    <div class="icone">♧</div>
+                    <img class="icone" src="imagens/icone 3.png" alt="Tecnologia">
                     <h3>Tecnologia<br>e inovação</h3>
                     <p>
                         Aceleramos o desenvolvimento tecnológico para
@@ -222,47 +226,81 @@
     </section>
 </main>
 
-<footer class="rodape">
-    <div class="container">
+
+<footer class="rodape" id="contato">
+    <div class="rodape-container">
+
         <div class="rodape-colunas">
-            <div>
-                <h3>Fale com a FIEMG</h3>
-                <p>0800 181 8189</p>
-                <p>0800 882 2525</p>
-                <p>(31) 3263 4200</p>
+            <div class="rodape-contato">
+                <p class="rodape-legenda">Serviço de Atendimento ao Cidadão:<br>Ouvidoria:</p>
+                <a class="rodape-telefone" href="tel:08001818189">0800 181 8189</a>
+                <a class="rodape-telefone" href="tel:08008822525">0800 882 2525</a>
+
+                <p class="rodape-legenda">Recepção Sede:</p>
+                <a class="rodape-telefone" href="tel:+553132634200">(31) 3263 4200</a>
+
+                <p class="rodape-horario">
+                    Horário de funcionamento:<br>
+                    Segunda a sexta-feira das 8h às 17h<br>
+                    Exceto feriados nacionais e locais.
+                </p>
+
+                <a class="rodape-email" href="mailto:crc@fiemg.com.br">
+                    ✉ crc@fiemg.com.br
+                </a>
             </div>
 
-            <div>
-                <h3>Institucional</h3>
+            <div class="rodape-links">
                 <a href="#">Conheça o Sistema</a>
                 <a href="#">Fale Conosco</a>
-                <a href="#">SENAI</a>
-                <a href="#">IEL</a>
+                <a href="#">SAC</a>
+                <a href="#">Intranet</a>
             </div>
 
-            <div>
-                <h3>FIEMG</h3>
+            <div class="rodape-links">
+                <a href="#">Gestão 2022-2026</a>
                 <a href="#">Trabalhe Conosco</a>
+                <a href="#">Estatuto FIEMG</a>
                 <a href="#">Ouvidoria</a>
-                <a href="#">Política de Privacidade</a>
+                <a href="#">Aviso de Privacidade e<br>Proteção de Dados</a>
+                <a href="#">Integridade</a>
+                <a href="#">Política de Segurança da<br>Informação</a>
+                <a href="#">Sindicatos Filiados</a>
             </div>
 
-            <div>
-                <h3>Relacionamento</h3>
-                <a href="#">Calendário de Eventos</a>
-                <a href="#">Portal de Compras</a>
+            <div class="rodape-links">
+                <a href="#">Calendário da Indústria</a>
+                <a href="#">Pagamento RPA</a>
+                <a href="#">Pagamento a Empresas</a>
                 <a href="#">Licitações e Compras</a>
             </div>
         </div>
 
-        <div class="rodape-final">
-            <strong class="logo-rodape">SENAI</strong>
-            <p>Federação das Indústrias do Estado de Minas Gerais</p>
-            <p>Minas Gerais — Brasil</p>
+        <div class="rodape-inferior">
+            <a href="#" class="rodape-logo">
+                <img src="imagens/senai logo.webp" alt="SENAI — Pelo futuro do trabalho">
+            </a>
+
+            <div class="rodape-endereco">
+                <strong>Federação das Indústrias do Estado de Minas Gerais</strong>
+                <span>Av. do Contorno, 4456 – Funcionários</span>
+                <span>Belo Horizonte/MG – CEP: 30110-028</span>
+            </div>
+
+            <div class="rodape-redes">
+                <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener">◎</a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener">in</a>
+                <a href="https://www.youtube.com/" aria-label="YouTube" target="_blank" rel="noopener">▶</a>
+                <a href="https://x.com/" aria-label="X" target="_blank" rel="noopener">𝕏</a>
+                <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener">f</a>
+            </div>
         </div>
 
-        <p class="credito">FIEMG • SENAI</p>
     </div>
 
-    <link rel="stylesheet" href="style.css">
+    <button class="voltar-topo" type="button"
+        aria-label="Voltar ao topo"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </button>
 </footer>
